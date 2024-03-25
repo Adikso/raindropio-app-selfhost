@@ -1,6 +1,6 @@
 export const
 	APP_BASE_URL 		= process.env.APP_BASE_URL || 'http://localhost:2000',
-	WORKERS_BASE_URL	= process.env.WORKERS_BASE_URL || 'http://localhost:2000/worker',
+	WORKERS_BASE_URL	= process.env.WORKERS_BASE_URL || 'http://localhost:3000/worker',
 	LEGACY_WORKERS_BASE_URL=WORKERS_BASE_URL
 
 export const
