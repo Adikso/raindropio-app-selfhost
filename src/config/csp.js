@@ -1,3 +1,5 @@
+const { APP_BASE_URL } = require('~data/constants/app')
+
 module.exports = {
-    hosts: 'https://app.raindrop.io https://*.sentry.io https://sentry.io'
+    hosts: APP_BASE_URL
 }

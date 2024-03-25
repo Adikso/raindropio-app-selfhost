@@ -1,5 +1,6 @@
 const fs = require('fs')
 const locales = require('./locales')
+const {APP_BASE_URL} = require('~data/constants/app')
 
 function file({ emitFile }, filename) {
 	const name = 'assets/'+filename.split('/').pop()
@@ -25,7 +26,7 @@ module.exports = ({ vendor, production=false }, l) => {
 
 		name:			'Raindrop.io'+(!production?' (Dev)':''),
 		description:	'__MSG_appDesc__',
-		homepage_url:	'https://app.raindrop.io',
+		homepage_url:	APP_BASE_URL,
 		author:			'Mussabekov Rustem',
 		short_name:		'Raindrop.io',
 		default_locale:	'en',

@@ -85,7 +85,12 @@ module.exports = ({ production, filename='[name].[contenthash]' }, { profile }) 
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify(production?'production':'development'),
 			'process.env.SENTRY_RELEASE': JSON.stringify(process.env.SENTRY_RELEASE),
-			RAINDROP_ENVIRONMENT: JSON.stringify('browser')
+			RAINDROP_ENVIRONMENT: JSON.stringify('browser'),
+
+			'process.env.APP_BASE_URL': JSON.stringify(process.env.APP_BASE_URL),
+			'process.env.API_ENDPOINT_URL': JSON.stringify(process.env.API_ENDPOINT_URL),
+			'process.env.WORKERS_BASE_URL': JSON.stringify(process.env.WORKERS_BASE_URL),
+			'process.env.PREVIEW_URL': JSON.stringify(process.env.PREVIEW_URL)
 		}),
 
 		//HTML

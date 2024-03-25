@@ -1,4 +1,5 @@
 import { target, environment } from '~target'
+import { APP_BASE_URL } from '~data/constants/app'
 
 //safari extension in-app purchase
 let overrideProLink = ''
@@ -10,9 +11,9 @@ if (target == 'extension')
 
 export default {
     app: {
-        index: 'https://app.raindrop.io',
-        search: 'https://app.raindrop.io/my/0/',
-        import: 'https://app.raindrop.io/settings/import'
+        index: APP_BASE_URL,
+        search: `${APP_BASE_URL}/my/0/`,
+        import: `${APP_BASE_URL}/settings/import`
     },
     
     download: 'https://raindrop.io/download',

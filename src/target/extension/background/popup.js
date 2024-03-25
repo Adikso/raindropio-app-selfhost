@@ -1,9 +1,10 @@
 import browser from 'webextension-polyfill'
 import { environment } from '~target'
+import { APP_BASE_URL } from '~data/constants/app'
 
 //safari have problems with cookies in extension pages
-const base = environment.includes('safari') ? 
-    'https://app.raindrop.io' : 
+const base = environment.includes('safari') ?
+    APP_BASE_URL :
     '/index.html#'
 
 export async function open(path, { width = 420, height = 600 } = {}) {

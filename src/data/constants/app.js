@@ -1,15 +1,12 @@
 export const
-	APP_DOMAIN 			= 'raindrop.io'
+	APP_BASE_URL 		= process.env.APP_BASE_URL || 'http://localhost:2000',
+	WORKERS_BASE_URL	= process.env.WORKERS_BASE_URL || 'http://localhost:2000/worker',
+	LEGACY_WORKERS_BASE_URL=WORKERS_BASE_URL
 
 export const
-	APP_BASE_URL 		= `https://${APP_DOMAIN}`,
-	WORKERS_BASE_URL	= 'https://rdl.ink',
-	LEGACY_WORKERS_BASE_URL=`https://stella.${APP_DOMAIN}`
-
-export const
-	API_ENDPOINT_URL 	= `${process.env.NODE_ENV == 'production' || RAINDROP_ENVIRONMENT == 'react-native' ? 'https://api.raindrop.io' : 'http://localhost:3000' }/v1/`,
+	API_ENDPOINT_URL 	= `${process.env.NODE_ENV == 'production' || RAINDROP_ENVIRONMENT == 'react-native' ? process.env.API_ENDPOINT_URL : 'http://localhost:3000' }/v1/`,
 	API_RETRIES 		= 3,
 	API_TIMEOUT 		= 30000,
 	FAVICON_URL 		= `${WORKERS_BASE_URL}/favicon`,
 	RENDER_URL 			= `${WORKERS_BASE_URL}/render`,
-	PREVIEW_URL			= 'https://preview.systems'
+	PREVIEW_URL			= process.env.PREVIEW_URL || 'http://localhost:3000/preview'
