@@ -4,7 +4,7 @@ export const
 	LEGACY_WORKERS_BASE_URL=WORKERS_BASE_URL
 
 export const
-	API_ENDPOINT_URL 	= `${process.env.NODE_ENV == 'production' || RAINDROP_ENVIRONMENT == 'react-native' ? process.env.API_ENDPOINT_URL : 'http://localhost:3000' }/v1/`,
+	API_ENDPOINT_URL 	= `${(process.env.NODE_ENV == 'production' || RAINDROP_ENVIRONMENT == 'react-native') && process.env.API_ENDPOINT_URL ? process.env.API_ENDPOINT_URL : 'http://localhost:3000' }/v1/`,
 	API_RETRIES 		= 3,
 	API_TIMEOUT 		= 30000,
 	FAVICON_URL 		= `${WORKERS_BASE_URL}/favicon`,
